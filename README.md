@@ -1,96 +1,128 @@
-Crop Recommendation System 🌱
-Overview
-This project uses a machine learning model to recommend the best crop to grow based on soil and weather data. By analyzing factors such as fertilizer amount, temperature, and soil nutrient levels (N, P, K), the model predicts crop yield. The goal is to provide a data-driven tool to help farmers maximize their agricultural output.
+🌱 Crop Recommendation System
 
-The project involves data cleaning, exploratory data analysis, feature scaling, and the training and evaluation of two different regression models. The final model, a Random Forest Regressor, proved to be highly effective for this task.
 
-Features 📋
-Data Preprocessing: Cleans and prepares the dataset for modeling.
 
-Model Training: Implements and trains both Linear Regression and Random Forest Regressor models.
+A machine learning-based recommendation system that suggests the best crop to grow based on soil nutrients (N, P, K), fertilizer amount, and weather conditions (temperature, humidity, rainfall).
+The system helps farmers make data-driven decisions to maximize yield and improve agricultural productivity.
 
-Model Evaluation: Compares the models using Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE).
+🚀 Features
 
-Data Visualization: Includes plots for actual vs. predicted values and highlights the most important features for predicting crop yield.
+✅ Data Preprocessing – Cleans and prepares raw agricultural data.
+✅ Model Training – Implements and compares Linear Regression and Random Forest Regressor.
+✅ Model Evaluation – Uses MAE & RMSE for performance metrics.
+✅ Feature Importance Analysis – Identifies key factors affecting crop yield.
+✅ Data Visualization – Includes scatter plots & feature importance charts.
 
-Results & Key Findings 📊
-The Random Forest Regressor significantly outperformed the Linear Regression model, demonstrating its superior capability in handling the complexities of the dataset.
+📊 Results & Key Findings
+
+The Random Forest Regressor outperformed Linear Regression, proving more effective for non-linear relationships in the dataset.
 
 Model	MAE	RMSE
-Random Forest Regressor	0.12	0.18
-Linear Regression	0.57	0.69
+🌳 Random Forest Regressor	0.12	0.18
+📉 Linear Regression	0.57	0.69
 
-Export to Sheets
-The feature importance analysis revealed that Fertilizer and temperature (temp) are the most significant factors in determining crop yield.
+🔑 Fertilizer and Temperature were the most influential factors in predicting crop yield.
 
-Project Structure 📁
+📌 Example Visualizations
+1️⃣ Actual vs Predicted Crop Yield
+<img src="outputs/figures/actual_vs_predicted.png" alt="Actual vs Predicted Crop Yield" width="600"/>
+2️⃣ Feature Importance (Random Forest)
+<img src="outputs/figures/feature_importance.png" alt="Feature Importance" width="600"/>
+📂 Project Structure
 Crop-Recommendation/
 ├── data/
-│   └── README.md  <-- Instructions to download the dataset
+│   └── README.md          # Instructions to download dataset
 ├── notebooks/
 │   └── crop_recommendation_model.ipynb
 ├── outputs/
 │   ├── figures/
+│   │   ├── actual_vs_predicted.png
 │   │   └── feature_importance.png
 │   └── models/
-│       └── .gitkeep  <-- Trained models are not committed here
+│       └── .gitkeep       # Models not pushed to repo
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-How to Run 🚀
-There are two ways to run this project: using Google Colab (recommended) or running it on your local machine.
 
-Option 1: The Easy Way (Google Colab)
-Click the "Open in Colab" badge at the top of this README.
+⚡ How to Run
+Option 1: Google Colab (Recommended)
 
-The notebook will open in Google Colab.
+Click the "Open in Colab" badge above.
 
-Run the cells from top to bottom to execute the analysis.
+Upload dataset (see data/README.md).
 
-Option 2: Running Locally
-Clone the repository:
+Run all cells from top to bottom.
 
-Bash
-
+Option 2: Local Setup
+# Clone the repository
 git clone https://github.com/<your-username>/Crop-Recommendation.git
 cd Crop-Recommendation
-Create and activate a virtual environment:
 
-Bash
-
-# For Windows
+# Create a virtual environment
 python -m venv venv
+# Windows
 venv\Scripts\activate
-
-# For macOS/Linux
-python3 -m venv venv
+# macOS/Linux
 source venv/bin/activate
-Install the required dependencies:
 
-Bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch Jupyter Notebook
+jupyter notebook
+
+
+Then open:
+
+notebooks/crop_recommendation_model.ipynb
+
+📑 Dataset
+
+The dataset includes soil nutrient levels, weather conditions, and crop yield records.
+⚠️ Due to size restrictions, the dataset is not included in this repo.
+👉 Please follow instructions in data/README.md to download and place it in the correct folder.
+
+🛠️ Dependencies
+
+Main libraries used:
+
+pandas – data handling
+
+numpy – numerical computations
+
+scikit-learn – ML models & evaluation
+
+matplotlib / seaborn – visualization
+
+joblib – model persistence
+
+Install all dependencies with:
 
 pip install -r requirements.txt
-Launch Jupyter Notebook:
 
-Bash
+🔮 Future Improvements
 
-jupyter notebook
-Then, navigate to the notebooks/ directory and open crop_recommendation_model.ipynb.
+ Add deep learning model (Neural Networks) for comparison
 
-Dataset
-The dataset used for this project contains information on soil and weather conditions and the corresponding crop yield. Due to its size, it is not included in this repository. Please see the instructions in the data/README.md file to download and place it in the correct directory.
+ Deploy model using Flask/Django API
 
-Dependencies
-The main libraries used in this project are listed in the requirements.txt file:
+ Build a frontend dashboard for farmers
 
-pandas
+ Expand dataset with real-time weather API integration
 
-numpy
+🤝 Contributing
 
-scikit-learn
+Contributions are welcome! 🎉
 
-matplotlib
+Fork this repository
 
-seaborn
+Create a new branch (feature/new-feature)
 
-joblib
+Commit your changes
+
+Push to your branch and submit a PR
+
+📜 License
+
+This project is licensed under the MIT License – see the LICENSE
+ file for details.
