@@ -1,0 +1,16 @@
+# Python cache & virtual environments
+__pycache__/
+*.pyc
+.env
+venv/
+
+# IDE and notebook checkpoint files
+.vscode/
+.ipynb_checkpoints/
+
+# Data files (allow small samples)
+data/*.csv
+!data/sample_small.csv
+
+# Outputs - Especially trained models!
+outputs/models/
