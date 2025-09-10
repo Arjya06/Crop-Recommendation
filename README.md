@@ -4,6 +4,7 @@
 
 A machine learning-based recommendation system that suggests the best crop to grow based on soil nutrients (N, P, K), fertilizer amount, and weather conditions (temperature, humidity, rainfall).
 The system helps farmers make data-driven decisions to maximize yield and improve agricultural productivity.
+(http://localhost:8501/)
 
 🚀 Features
 
